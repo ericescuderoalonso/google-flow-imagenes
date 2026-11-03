@@ -1,0 +1,546 @@
+Fuente: Foto  IV.pdf
+Transcripción OCR de 10 páginas. Puede contener errores de reconocimiento.
+
+===== PÁGINA 1 / 10 =====
+
+Guía maestra para crear prompts de fotografía lifestyle de productos con IA
+
+Los mejores prompts de producto no describen un producto: describen un momento de vida donde el
+producto simplemente existe. Esta es la diferencia fundamental entre una imagen tipo catálogo y una
+fotografía lifestyle orgánica generada con IA. Dominar esta técnica requiere combinar vocabulario fotográfico
+preciso, una estructura de prompt estratégica y técnicas de integración natural que engañen al ojo humano. Esta
+guía cubre desde qué es Nano Banana Pro hasta plantillas listas para usar en cualquier categoría de producto,
+
+pasando por los errores que arruinan el 90% de las imágenes generadas por principiantes.
+
+Qué es Nano Banana Pro y cómo aprovecharlo al máximo
+
+Nano Banana Pro es el modelo de generación de imágenes Gemini 3 Pro de Google DeepMind,
+
+una herramienta independiente.
+desarrolladores durante las pruebas beta y se consolidó como el nombre popular del modelo.
+Existen dos variantes: Nano Banana estándar (Gemini 2.5 Flash Image, optimizado para velocidad) y Nano
+Banana Pro (Gemini 3 Pro Image, optimizado para precisión y calidad profesional).
+
+El nombre "Nano Banana" surgió como apodo en la comunidad de
+
+Se accede a él principalmente a través de la app de Google Gemini (seleccionando "Crear imágenes" y
+
+Google AI Studio para desarrolladores, Google Cloud
+
+y numerosas plataformas de terceros como
+
+eligiendo el modo "Thinking"),
+
+Vertex Al para uso empresarial vía API,
+nanobanana.org, ImagineArt y GlobalGPT que funcionan como interfaces alternativas sobre el mismo modelo.
+
+Lo que distingue a Nano Banana Pro de competidores como Midjourney o DALL-E es su arquitectura de
+"razonamiento antes de renderizar": el modelo analiza semánticamente el prompt, evalúa lógica física,
+
+Higgsfield) Esto lo hace excepcionalmente
+
+bueno para prompts complejos con múltiples restricciones, exactamente lo que necesitamos para fotografía
+
+causalidad e intención emocional antes de generar la imagen.
+
+lifestyle de productos.
+Capacidades clave para fotografía de productos:
+
++ Acepta prompts en lenguaje natural sin sintaxis especial, aunque responde mejor a prompts
+detallados y estructurados
+
++ Permite subir hasta 14 imágenes de referencia simultáneamente para mantener consistencia de producto
+
++ Soporta edición iterativa: generas una base y describes cambios en lenguaje natural (cambiar fondo,
+
+ajustar iluminación, modificar ángulo)
+
++ Genera a resoluciones de 1K, 2K y 4K dependiendo del plan (gratuito: IMP; Pro $19.99/mes: 2K; Ultra:
+
+4K)
+
++ Admite especificación de ratio de aspecto directamente en el prompt ("2:3 aspect ratio", "16:9"
+
++ Soporta códigos hexadecimales para colores exactos de marca
+
+Workflow recomendado para producto lifestyle en Nano Banana Pro:
+
+===== PÁGINA 2 / 10 =====
+
+1. Prompt base: "Product photo of [producto] in [escena], [iluminación]"
+Edición 1: "Change the background to [nuevo contexto lifestyle]"
+
+Edición 2: "Add [persona interactuando naturalmente con el producto]"
+
+ey NM
+
+Edición 3: "Adjust lighting to [iluminación específica], make it feel more candid"
+
+Todas las técnicas de esta guía son transferibles a Midjourney, DALL-E, Leonardo Al y Flux, con ajustes
+
+menores de sintaxis que se detallan mas adelante.
+
+La anatomia de un prompt lifestyle perfecto
+
+El error más común es describir el producto. Un prompt lifestyle describe una escena de vida real donde el
+producto participa. La estructura óptima sigue este orden de prioridad, porque los modelos de IA dan más peso
+
+a las primeras palabras: (Chatsmith +2
+
+Fórmula maestra de 8 elementos:
+
+[1. Tipo de imagen] + [2. Persona + acción] + [3. Producto integrado en la acción] +
+[4. Escenario/ambiente] + [5. Iluminación] + [6. Mood/atmósfera] +
+
+[7. Especificaciones técnicas de cámara] + [8. Exclusiones]
+
+Observa que el producto aparece en tercer lugar, no primero. Esto es intencional. En fotografía lifestyle, el
+producto es parte de la historia, no la historia completa. Cuando pones el producto primero, la IA lo convierte en
+
+protagonista absoluto y la imagen se siente como catálogo.
+Ejemplo aplicado — Biberón de bebé:
+
+"Lifestyle photography, a young father in his early 30s sitting in a rocking chair feeding his newborn in a
+softly lit nursery, [producto] baby bottle held naturally in his hand, warm golden morning light filtering
+through sheer white curtains, pastel nursery décor with wooden mobile visible in background, tender and
+nurturing atmosphere, 85mm lens, f/2.0, shallow depth of field, authentic family moment, no text, no
+
+watermark"
+
+Por qué funciona cada elemento:
+
+El prompt abre con "lifestyle photography" para establecer el género visual Luego describe al padre y su
+acción — el momento emocional. El biberón aparece como parte natural de esa acción ("held naturally in his
+hand”), no como objeto aislado. La iluminación y el escenario refuerzan la emoción. Los parámetros técnicos de
+cámara (85mm, f/2.0) producen el desenfoque de fondo cremoso que asociamos con fotografía profesional de
+
+estilo de vida.
+
+Claves de redacción que transforman los resultados:
+
++ Usa verbos de acción, no de posición: "feeding her baby with" en vez de "baby bottle placed on table"
+
+===== PÁGINA 3 / 10 =====
+
++ Describe lenguaje corporal: "relaxed posture", "natural smile looking down at baby", "focused
+
+expression while cooking"
+
++ Usa "candid" y "unposed" para señalar espontaneidad: estos términos activan asociaciones de
+fotografia documental en el modelo
+
++ Incluye props contextuales: "coffee cup nearby", "scattered toys on floor", "folded towels beside" —
+estos props secundarios evitan que el producto parezca pegado digitalmente
+
++ Especifica la superficie donde descansa el producto: "resting on wooden countertop", "on the nightstand
+beside the bed" — esto genera sombras de contacto naturales que anclan el objeto en la escena
+
++ Usa lenguaje MUST/NEVER para restricciones críticas en Nano Banana Pro: "product
+MUST be visible but not centered”, "NEVER include any text on the product"
+
+Vocabulario fotográfico que transforma resultados mediocres en profesionales
+
+La diferencia entre una imagen amateur y una profesional generada por IA se reduce a tres categorías de
+vocabulario técnico: iluminación, óptica y composición. Cada término activa asociaciones específicas en los
+datos de entrenamiento del modelo.
+
+Iluminación: el diferenciador número uno
+
+La iluminación es, sin excepción, el factor que más impacto tiene en la calidad percibida de una imagen
+generada por IA. Estos son los términos más efectivos para cada estilo lifestyle:
+Para escenas cálidas y emocionales (familias, bebés): "warm golden hour light", "soft morning window light
+
+from the left”, "honey-toned ambient lighting”, "candle-lit warm glow". La frase "golden hour backlight"
+produce consistentemente ese brillo dorado envolvente que caracteriza la fotografía familiar profesional.
+
+Para escenas limpias y minimalistas: "soft diffused overhead lighting", "bright and airy”, "even studio softbox
+lighting", "high-key lighting". La clave es "diffused” — luz suave sin sombras duras.
+
+Para escenas lujosas y premium: "dramatic side lighting", "low-key lighting", "single spotlight with deep
+
+shadows", "rim lighting creating edge separation”, "chiaroscuro' La combinación de "dramatic
+
+Rembrandt lighting with subtle rim light" produce el look editorial de alta gama.
+
+Para escenas orgánicas y naturales: "dappled sunlight through leaves", “overcast soft natural light", "natural
+
+daylight, no artificial lighting", "soft window light with visible dust particles". Agregar "natural
+imperfections" y "lived-in feel" incrementa la autenticidad percibida.
+Óptica: lentes y cámaras que disparan el realismo
+
+Los modelos de IA asocian nombres de cámaras y lentes con estilos fotográficos específicos de sus datos de
+entrenamiento. Estos términos no simulan óptica real, pero activan patrones visuales asociados:
+
+wre Al Prompt
+
+Distancias focales y su efecto:
+
+===== PÁGINA 4 / 10 =====
+
+Efecto visual
+
+Mejor uso lifestyle
+
+24mm Vista amplia, contexto ambiental dominante Mostrar producto en habitación completa
+35mm Perspectiva natural, como el ojo humano Escenas de cocina, espacios de vida
+50mm Proporciones naturales, versatil Retratos con producto, escenas cotidianas
+85mm Desenfoque cremoso, aísla al sujeto Retratos emocionales, productos premium
+100-135mm Compresión de fondo, separación fuerte Close-ups de producto en uso
+
+Macro Detalle extremo de textura Texturas de materiales, gotas de agua
+
+Aperturas y profundidad de campo: Decir "f/1.8, shallow depth of field, creamy bokeh" produce fondo
+desenfocado suave que aísla el producto.
+field, everything in sharp focus". La frase "shallow depth of field” en lenguaje natural funciona igual de
+
+bien que especificar un número f exacto. (Al Smart Ventures ) (ControlNet
+
+Referencias de cámara que mejoran resultados: "Shot on Canon EOS R5" activa calidad comercial
+profesional. "Hasselblad medium format" produce un look premium de alta gama editorial.
+"Kodak Portra 400" es la referencia de película más poderosa para lifestyle — produce tonos de
+
+piel cálidos, grano sutil y una paleta elegante ligeramente desaturada que se asocia universalmente con
+
+Para que todo esté enfocado (flat lays), usa "f/8, deep depth of
+
+fotografía de estilo de vida profesional "Fujifilm Pro 400H" genera tonos más fríos con pasteles
+
+limpios, ideal para productos de bebé.
+Composición: cómo dirigir la mirada del espectador
+
++ "Rule of thirds, product at right intersection point" — composición balanceada y dinámica
+
+LTX Studio
+
++ "Negative space on the left" — deja respirar al producto, look minimalista
+
++  "Eye-level shot" — conexión natural, como si el espectador estuviera presente
+
++ "Slight over-the-shoulder angle" — perspectiva íntima en primera persona
++  "45-degree overhead angle" — muestra la parte superior y frontal del producto simultáneamente
++ "Top-down flat lay" — ideal para composiciones de producto con accesorios
+
+Cuatro estilos visuales y las palabras exactas para lograrlos
+
+Cálido y emocional (familias, bebés, momentos íntimos)
+
+Este estilo busca provocar una respuesta emocional inmediata. Las palabras activadoras son: "warm golden
+
+light", "tender moment", "intimate", "nurturing atmosphere", "authentic connection", "heartwarming", "amber
+
+===== PÁGINA 5 / 10 =====
+
+tones", "honey-toned lighting", "cozy". La combinación de cámara ideal es "85mm lens, f/2.0, creamy bokeh,
+Kodak Portra 400 film look".
+
+Ejemplo completo: "Lifestyle photography, intimate close-up of a mother cradling her newborn in a sunlit
+nursery, [producto] baby blanket draped softly around the baby, warm golden morning light streaming
+through sheer curtains, soft pastel room décor with wooden mobile above, tender expression, natural skin
+texture, 85mm lens, f/2.0, shallow depth of field, warm amber tones, emotional and nurturing atmosphere,
+authentic moment, no text, no watermark"
+
+Minimalista y limpio
+
+Busca transmitir modernidad, orden y sofisticación a través de la simplicidad. Palabras activadoras:
+
+"minimalist composition", "clean lines", "negative space", "neutral color palette", "muted tones", "uncluttered",
+mon non
+
+"serene", "white space", "geometric simplicity", "bright and airy". Iluminación: "soft even diffused lighting" o
+
+"bright studio light, no harsh shadows".
+
+Ejemplo: "Minimalist lifestyle photography, single [producto] on a clean white marble surface with one
+small eucalyptus sprig as accent, neutral warm background, soft diffused overhead light creating gentle
+shadow, ample negative space, modern Scandinavian aesthetic, serene and calm, 50mm lens, f/4, sharp
+focus throughout, no text"
+
+Lujoso y premium
+
+Comunica exclusividad y deseo aspiracional. Palabras activadoras: "luxury aesthetic", "premium", "opulent",
+"editorial quality", "magazine-worthy", "Vogue-inspired", "rich deep tones", "gold accents", "velvet", "marble",
+"silk". Iluminación: "dramatic single-source lighting, deep shadows, rim lighting". Referencia de cámara:
+
+"Phase One medium format" o "Hasselblad".
+
+Ejemplo: "Luxury lifestyle product photography, elegant woman's hands with natural manicure reaching
+toward [producto] on a dark marble surface with subtle gold leaf accents, dramatic single-source lighting
+from left creating deep shadows, rich warm tones, silk fabric draped in background, editorial magazine
+quality, shallow depth of field, Phase One medium format feel, no text"
+
+Organico y natural
+
+Transmite autenticidad, sostenibilidad y conexión con la naturaleza. Palabras activadoras: "organic",
+
+"natural", "earthy", "botanical", "raw textures", "wooden surfaces", "linen", "jute", "sustainable aesthetic",
+
+"earth tones”, "muted greens", "terracotta", "sage". Iluminación: "natural daylight", "overcast soft light",
+"dappled sunlight through leaves".
+
+Ejemplo: "Organic lifestyle photography, [producto] resting on a rustic wooden table surrounded by fresh
+rosemary sprigs and dried lavender, soft natural daylight from a nearby window casting gentle shadows,
+earth tones throughout, linen napkin, matte textures, terracotta pot with small plant in background, calm and
+grounding atmosphere, sustainable living aesthetic, 35mm lens, natural color grading, authentic and
+unprocessed feel, no text"
+
+===== PÁGINA 6 / 10 =====
+
+Técnicas avanzadas de integración natural del producto en escenas
+
+El mayor desafio de la fotografía lifestyle con IA es evitar que el producto parezca "pegado" digitalmente en
+la escena. Estas técnicas resuelven este problema sistemáticamente.
+
+Describe el contexto primero, el producto después. En lugar de "Product photo of [producto] in a kitchen",
+escribe "A cozy morning breakfast scene on a wooden kitchen table with warm light — [producto] sits naturally
+among coffee cups and a folded newspaper”. Cuando el producto es parte del escenario en vez del protagonista,
+
+la IA lo integra orgánicamente.
+
+Ancla el producto con verbos de interacción y superficies específicas. Siempre describe sobre qué superficie
+descansa el producto ("resting on oak countertop", "placed on the nightstand") y cómo alguien interactúa con él
+("held loosely in her left hand”, "being stirred with"). Los verbos de acción eliminan el efecto flotante porque
+
+obligan a la IA a calcular la relación física entre la mano, el producto y la superficie.
+
+Agrega elementos de "vida real" alrededor del producto. Imperfecciones controladas como "slightly
+wrinkled bedsheets", "a few crumbs on the cutting board", "condensation on the glass" comunican autenticidad.
+Un entorno demasiado perfecto delata la imagen como artificial.
+
+Usa prompts negativos para eliminar artificialidad. En todas las plataformas, especifica lo que NO quieres:
+"no CGI, no 3D render, no artificial look, no perfect symmetry, no floating product, no pasted appearance, no
+
+cutout look". En Midjourney: Eno CGI, 3D render, floating, pasted, artificial). En Leonardo Al, activa
+
+"Negative Prompts" en Advanced Settings.
+
+Para personas interactuando con productos: describe la acción completa, no solo la presencia. "Father gently
+rocking baby to sleep, [producto] monitor visible on the shelf behind him" funciona infinitamente mejor que
+
+"man next to baby monitor”. Describe postura natural ("relaxed posture", "looking down at baby"), y si
+
+necesitas manos visibles, sé extremadamente específico: "right hand gently holding the
+bottle by its middle section" — la vaguedad produce manos distorsionadas.
+
+Plantillas reutilizables por categoría de producto
+
+Fórmula universal (copiar y personalizar)
+
+"[Tipo: Lifestyle/candid/editorial] photography, [persona + edad aproximada + acción
+natural con el producto), [producto con 2-3 atributos clave: material, color, tamaño],
+[escenario específico con 2-3 detalles de ambiente], (iluminación: tipo + dirección +
+calidad], [2-3 props secundarios contextuales], [mood/atmósfera en 2-3 adjetivos],
+[lente + apertura + profundidad de campo), [estilo: commercial quality / editorial
+
+authentic lifestyle], no text, no watermark, no logos"
+
+Productos de bebé
+
+"Candid lifestyle photography, [mother/father in their 30s] [acción: feeding /
+
+bathing / putting to sleep / playing with] their [newborn/toddler], [PRODUCTO]
+
+===== PÁGINA 7 / 10 =====
+
+[integración: held naturally / draped over / placed beside crib], [escena: warm
+nursery with pastel walls / sunlit playroom / cozy bedroom], soft morning window light,
+[props: wooden toys scattered, soft blanket, mobile above crib], tender and peaceful
+atmosphere, 85mm lens, f/2.0, shallow depth of field, Kodak Portra 400 tones,
+
+authentic newborn lifestyle, no text"
+
+Productos de belleza y skincare
+
+"Beauty lifestyle photography, [woman mid-20s to 30s] [accién: applying serum to
+face / massaging cream into skin / holding bottle examining label], [PRODUCTO]
+[integración: in her hands / on marble counter beside mirror / among bathroom
+accessories], [escena: bright modern bathroom / vanity with soft lighting / self-care
+comer], soft diffused window light creating dewy skin appearance, [props: white towel,
+small plant, water droplets on surface], fresh and luxurious self-care atmosphere,
+50mm lens, 172.8, shallow depth of field, clean beauty editorial, natural skin texture
+
+with visible pores, no text"
+
+Productos de cocina y hogar
+
+"Lifestyle product photography, [person mid-action] [acción: chopping vegetables /
+pouring from pitcher / stirring soup / setting table], [PRODUCTO] [integración: in
+active use / on countertop within arm's reach / visible on open shelf], [escena: bright
+modern kitchen with white subway tile / rustic farmhouse kitchen / cozy dining area],
+warm natural side lighting from kitchen window, [props: fresh herbs, cutting board,
+scattered ingredients, ceramic bowls], homey and inviting atmosphere, 35mm lens,
+
+172.8, warm tones, food lifestyle photography, no text"
+
+Productos de tecnologia
+
+"Lifestyle photography, [professional person in their 30s] [acción: working focused
+at desk / listening to music on commute / adjusting smart device], [PRODUCTO]
+[integración: in active use / on desk within workspace / worn naturally], [escena:
+minimalist home office with large window / modern living room / urban coffee shop],
+clean natural daylight, [props: notebook, coffee cup, potted plant], productive and
+calm modern atmosphere, 50mm lens, f/2.8, neutral tones, clean color grading,
+
+authentic workspace aesthetic, no text"
+
+Productos de moda y accesorios
+
+"Editorial lifestyle photography, [model description: age, style] [acción: walking
+through city / sitting at café / reaching into bag], [PRODUCTO] [integración: worn
+naturally / draped over arm / casually placed on chair], [escena: bright European café
+
+/ urban street with warm tones / minimalist apartment], golden hour sidelight, [props:
+
+===== PÁGINA 8 / 10 =====
+
+coffee cup, sunglasses on table, open book], effortless and aspirational style, 85mm
+
+lens, 1/2.0, warm desaturated tones, fashion lifestyle photography, no text"
+
+Los 10 errores que arruinan prompts de producto y cómo corregirlos
+
+Error 1: Poner el producto como protagonista absoluto. Si tu prompt empieza con "Product photo of
+[producto]...", la IA genera una imagen tipo catálogo. Empieza describiendo la escena y la persona;
+introduce el producto como parte de la acción.
+
+Error 2: No especificar superficies ni sombras. Sin una superficie explícita ("on marble countertop", "resting
+on wooden shelf"), el producto "flota" en el espacio. Agrega siempre "natural contact shadow" para anclarlo
+visualmente.
+
+Error 3: Confiar en la IA para texto y logos. Todos los modelos actuales producen texto ilegible o
+
+distorsionado en productos. La solución es generar el producto con "blank label" o "no text, no
+logos" y agregar el branding real en post-producción con Canva o Photoshop.
+
+Error 4: Sobre-describir el producto y sub-describir la escena. Si dedicas el 80% del prompt a describir el
+producto y el 20% a la escena, la IA prioriza el producto y la escena se vuelve genérica. Para
+lifestyle, invierte la proporción: 70% escena + persona + mood, 30% producto.
+
+Error 5: Usar "photorealistic" como palabra mágica. Irónicamente, este término produce un look digital
+sobreproducido. Es más efectivo usar términos fotográficos reales: "shot on Canon EOS RS5, 85mm,
+
+1/2.8" o "Kodak Portra 400 film look" (AI Smart Ventures) — estos activan asociaciones de fotografía real en los
+datos de entrenamiento.
+
+Error 6: Ignorar las limitaciones de anatomía humana. La IA sigue luchando con manos, dedos y poses
+
+corporales completas. Cuando necesites personas, prefiere close-ups sobre cuerpo completo,
+describe poses específicas ("right hand gently cradling the product”), y usa inpainting para corregir anomalías
+anatómicas en lugar de regenerar toda la imagen. (Medium)
+
+Error 7: No usar prompts negativos. Omitir exclusiones genera texto aleatorio, marcas de agua, objetos
+flotantes y fondos recargados Incluye siempre: "no text, no watermark, no logo, no CGI, no artificial
+look, no extra fingers, no distorted hands".
+
+Error 8: Iluminación contradictoria. Describir "golden hour warm light" pero también "cool blue tones"
+confunde al modelo. Elige una dirección de luz y una temperatura de color coherentes: "soft warm key light
+
+from upper left, subtle fill from right".
+
+Error 9: Exceder los límites de tokens del modelo. Midjourney procesa efectivamente ~60 palabras; modelos
+basados en CLIP (Stable Diffusion) tienen límite de 77 tokens (~50 palabras); modelos con encoder TS (Flux)
+manejan ~375 palabras. Todo lo que exceda el limite es ignorado. Pon la información más importante
+
+al inicio.
+
+Error 10: No iterar. Esperar la imagen perfecta en el primer intento es irreal. El workflow
+profesional requiere 3-8 iteraciones: prompt base — ajustar iluminación — refinar composición — inpainting
+
+===== PÁGINA 9 / 10 =====
+
+de detalles — upscaling final. Cambia una sola variable por iteración para entender qué afecta
+cada cambio. (Jeffbullas +2
+
+Ajustes especificos por plataforma
+
+Aunque las técnicas de prompting son transferibles, cada plataforma tiene particularidades que maximizan
+
+resultados:
+
+Nano Banana Pro (Google Gemini): Usa lenguaje natural detallado. (Codecademy) Aprovecha la edición
+iterativa multi-turno: genera la base y refina con instrucciones conversacionales. Sube la foto real
+
+de tu producto como referencia (hasta 14 imágenes). Especifica ratio de aspecto en el prompt ("2:3
+
+aspect ratio”). Usa MUST/NEVER para restricciones estrictas. Soporta códigos hex para
+
+colores exactos de marca.
+
+Midjourney: Usa frases descriptivas separadas por comas, no oraciones completas. Parámetros críticos:
+4:5) para lifestyle vertical para literalidad (valores bajos = mas fiel al prompt), para evitar
+el "brillo AI" excesivo, para exclusiones. V7 es la versión más reciente.
+
+Usa para consistencia comercial. El prompt weight aumenta la importancia
+
+de un elemento.
+
+DALL-E / ChatGPT Images: Prefiere prompts conversacionales en lenguaje natural completo. No tiene
+parámetros de flags. Usa el editor integrado para inpainting de correcciones. Especifica exclusiones
+inline: "without any text or watermarks". Excelente para subir una foto real del producto y pedir que la IA lo
+
+coloque en una escena lifestyle.
+
+Leonardo Al: Activa PhotoReal V2 + preset Stock Photography para máximo realismo lifestyle.
+Usa frases cortas y descriptivas. Activa "Negative Prompts" en Advanced Settings con: "CGI,
+artificial, cartoon, illustration, blurry". Para piel realista, agrega "detailed skin texture, visible pores, natural
+
+imperfections".
+
+Flux: Estructura jerárquica sujeto-primero (pesa más las primeras palabras). Soporta
+códigos hex para colores de marca. (fal) Flux 2 admite prompts estructurados en JSON para escenas complejas.
+Maneja hasta -375 palabras efectivas. Parámetros: 30-45 steps para alta calidad. Agrega "ISO
+
+100, 1/125" para señales de realismo.
+
+Workflow completo de principio a fin
+
+El proceso profesional para generar una imagen lifestyle de producto con IA sigue estos pasos:
+
+Fase 1 — Planificación (antes del prompt). Define el objetivo emocional de la imagen: ¿qué debe sentir quien
+la vea? Define el estilo visual (cálido, minimalista, lujoso, orgánico). Identifica los 2-3 atributos visuales clave
+del producto (material, color, tamaño). Elige la escena y la interacción humana.
+
+Fase 2 — Prompt base. Usa la fórmula maestra. Genera 4-8 variaciones iniciales. No busques perfección;
+busca una base prometedora.
+
+===== PÁGINA 10 / 10 =====
+
+Fase 3 — Refinamiento iterativo. Selecciona la mejor base. Ajusta una variable por iteración: primero
+iluminación, luego composición, luego mood. (Typeface) En Nano Banana Pro, usa edición conversacional
+
+("make the lighting warmer", "move the product slightly to the left").
+
+En Midjourney, usa Vary Region
+
+para corregir áreas específicas.
+
+Fase 4 — Corrección de detalles. Usa inpainting para manos distorsionadas, objetos no deseados o anomalías
+menores. No regeneres toda la imagen por un defecto localizado.
+
+Fase 5 — Post-producción. Agrega texto, logos y etiquetas reales en Canva/Photoshop/Figma. Corrige color
+para consistencia de marca. Haz upscaling si necesitas resolución mayor (Midjourney Subtle/Creative, o
+
+herramientas externas). Exporta en las dimensiones requeridas por cada plataforma.
+
+Fase 6 — Biblioteca de prompts. Guarda cada prompt exitoso con su seed (si aplica), plataforma, y resultado
+obtenido en una base de datos (Notion, Airtable, Google Sheets). tiqueta por categoría de producto,
+estilo visual y mood. Esta biblioteca se convierte en tu activo más valioso con el tiempo.
+
+Conclusión: del prompt al sistema profesional
+
+Crear imágenes lifestyle de producto con IA no es cuestión de una frase mágica sino de un sistema replicable.
+Los tres principios que separan a un experto de un principiante son: primero, describir momentos de vida, no
+productos — el producto aparece como participante natural de la escena, nunca como protagonista aislado.
+
+Segundo, dominar el vocabulario fotográfico — términos como "85mm f/2.0", "Kodak Portra 400", "golden
+hour backlight" y "shallow depth of field" activan patrones de fotografia profesional real en los modelos de IA,
+
+algo que ninguna descripción genérica puede lograr. (KShare AI Prompts) Tercero, iterar sistemáticamente — la
+imagen final es siempre el resultado de 3-8 refinamientos progresivos, no de un solo prompt perfecto.
+
+La ventaja competitiva real está en construir una biblioteca personal de prompts probados organizados por
+categoría, estilo y plataforma. Con las plantillas de esta guía como base, cada nueva sesión de generación
+produce mejores resultados porque partes de un punto más alto. Nano Banana Pro, con su capacidad de
+razonamiento pre-generación y edición iterativa conversacional, ofrece actualmente el flujo de trabajo más
+natural para este tipo de fotografía — pero las técnicas fundamentales de prompting funcionan en cualquier
+modelo y seguirán siendo válidas mientras la generación de imágenes con IA se base en prompts de texto.

@@ -1,0 +1,471 @@
+Fuente: Foto II.pdf
+Transcripción OCR de 9 páginas. Puede contener errores de reconocimiento.
+
+===== PÁGINA 1 / 9 =====
+
+Guía maestra de prompting para imágenes hiperrealistas con IA
+
+Nano Banana Pro es en realidad el modelo Gemini 3 Pro Image de Google DeepMind (nombre
+en clave interno que se filtró y Google adoptó oficialmente), lanzado el 20 de noviembre de 2025.
+
+está asociado con Banana.dev ni fal.ai como se suponía.
+
+Seedream 4.5, de ByteDance, llegó el 3 de
+diciembre de 2025 y compite directamente con él. Ambos modelos representan un salto generacional en
+generación de imágenes: entienden lenguaje natural fluido en lugar de listas de keywords, renderizan texto
+legible dentro de las imágenes y mantienen consistencia de personajes a través de múltiples generaciones. Esta
+guía cubre la estructura óptima de prompts, parámetros técnicos, sistemas de traducción de lenguaje natural y
+técnicas avanzadas aplicables a ambos modelos y extensibles a FLUX, SDXL y Midjourney.
+
+Nano Banana Pro: el modelo de Google que razona antes de generar
+
+Nano Banana Pro funciona sobre la arquitectura Gemini 3 Pro con una topología "Brain and Hand": un cerebro
+multimodal analiza semánticamente el prompt (causas físicas, intención emocional, lógica espacial) antes de
+que un motor de difusión llamado GemPix 2 renderice la imagen final. Giggsficld) A diferencia de modelos
+anteriores, fuerza un paso de "Thinking" que no se puede desactivar — razona sobre el prompt como lo haría
+una cadena de pensamiento, a veces generando un prototipo en 1K antes de producir la salida final en 2K o 4K.
+
+mi
+
+xir
+
+Parámetros técnicos clave:
+
+Parámetro Valor
+Resolución máxima 4K (4096%4096, ~2000 tokens)
+
+Resolución estándar 2K (20482048, ~1120 tokens)
+
+Aspect ratios 1:1, 16:9, 9:16, 21:9, 2:3, 3:4
+
+Tiempo de generación 20s-60s+ (inconsistente por el paso de thinking)
+Imágenes de referencia Hasta 14 imágenes simultáneas
+
+Costo aproximado ~$0.134/imagen (2K), ~$0.24/imagen (4K)
+
+API model ID
+
+El modelo no utiliza los parámetros tradicionales de diffusion (CFG scale, steps, sampler) porque son
+manejados internamente por el motor GemPix 2. En lugar de ajustar sliders técnicos, toda la calidad se
+
+controla desde el prompt mismo.
+
+Estructura óptima de prompts para Nano Banana Pro
+
+El modelo responde extraordinariamente bien al lenguaje natural descriptivo. a formula probada por la
+
+===== PÁGINA 2 / 9 =====
+
+comunidad (especialmente por Max Woolf en minimaxir.com, con pruebas extensivas) sigue este patrón:
+
+[Descripción detallada del sujeto]
+
+La composición de TODAS las imágenes que generes DEBE obedecer
+TODAS las siguientes descripciones:
+- La imagen es fotografía profesional ganadora del Pulitzer
+para [publicación] en estilo [tipo]
+- La imagen tiene iluminación difusa neutral de las 3PM que
+complementa sujeto y fondo
+- El estilo fotográfico es hiperrealista con ultra alto detalle
+y nitidez, usando una Canon EOS RS con lente 100mm f/2.8L.
+Macro IS USM
+
+- NUNCA incluir texto, marcas de agua ni líneas superpuestas
+
+Varios principios distinguen a Nano Banana Pro de otros modelos. Primero, no necesita "keyword spam" —
+términos como "4k, trending on artstation, masterpiece, best quality" son innecesarios y pueden degradar
+Segundo, las MAYÚSCULAS funcionan como énfasis: "MUST", "EXACTLY", "NEVER"
+actúan como anclas lógicas que el modelo respeta rigurosamente. Tercero, las listas con viñetas en el prompt se
+convierten en restricciones lógicas que el modelo trata como requisitos independientes. Cuarto,
+entiende códigos hexadecimales de color como y hasta coordenadas GPS para generar
+ubicaciones específicas.
+
+Negative prompts en Nano Banana Pro
+
+No existe un campo separado de negative prompt. Las exclusiones se integran directamente en el prompt
+principal con instrucciones negativas explícitas:
+
++ (NUNCA incluir texto, marcas de agua ni líneas superpuestas”)
+
++ ("No incluir bokeh artificial"
+
++ (“Evitar distorsión de bordes de gran angular")
+
++ ("No incluir personas en el fondo"
+
+Errores comunes y cómo evitarlos
+
+El error más frecuente es tratar a Nano Banana Pro como Stable Diffusion — usar listas de tags separadas
+
+por comas en lugar de descripciones naturales. Otro error crítico es no aprovechar el system prompt:
+este modelo acepta instrucciones de sistema que se aplican consistentemente a todas las generaciones, lo cual es
+invaluable para mantener un estilo visual coherente en series de imágenes. Un tercer error es
+regenerar desde cero en lugar de usar la edición conversacional — pedirle "cambia el día soleado por una
+
+noche lluviosa" es más eficiente y económico que reescribir todo el prompt.
+
+===== PÁGINA 3 / 9 =====
+
+Seedream 4.5: el competidor silencioso que prioriza confiabilidad
+
+Desarrollado por el equipo Seedream dentro de ByteDance Seed (49+ investigadores), Seedream 4.5 usa una
+arquitectura Diffusion Transformer (DiT) con un VAE de alta compresión y un modelo de
+mejora de prompts basado en Vision Language Model (Seed1.5-VL). Su fortaleza principal es la consistencia y
+confiabilidad — donde Nano Banana Pro excede en texto complejo y razonamiento, Seedream
+y velocidad (~1.4—1.8 segundos
+
+4.5 destaca en esencia fotográfica, composición cinematográfica
+
+para una imagen 2K sin el modelo VLM).
+
+Parámetros técnicos:
+
+Parámetro Valor recomendado
+
+CFG / Guidance Scale 5.5-7.5 (bajo 5 = borroso; sobre 8 = plástico)
+Steps 28-32 con sampler Standard
+
+Sampler Euler Ao DPM++ 2M Karras (más estable)
+Resolución 1024x1024 hasta 2048x2048
+
+Prompt weight (palabra: 1.2)) para ajustar importancia
+Negative prompt Soportado como campo separado
+
+Imágenes por llamada Hasta 6 simultáneas
+
+Costo ~$0.04/imagen
+
+Diferencias clave en el estilo de prompting
+
+Seedream 4.5 comparte con Nano Banana Pro la preferencia por lenguaje natural sobre tags, pero con matices
+
+importantes. La guia oficial de BytePlus es explicita:
+
+. "Una chica con un vestido lujoso caminando bajo una sombrilla por un sendero arbolado, en el estilo
+
+de una pintura al óleo de Monet"
+
++ 2 "Chica, sombrilla, calle arbolada, textura de pintura al óleo"
+
+El modelo sigue una jerarquía de comprensión específica: Sujeto > Estilo > Composición —> lluminación.
+Los prompts que describen escenas en capas lógicas siguiendo este orden producen los mejores resultados. Una
+diferencia notable respecto a Nano Banana Pro es que Seedream 4.5 responde mejor a prompts concisos y
+precisos — "los prompts concisos son generalmente mejores que apilar vocabulario ornamentado
+repetidamente" según la documentación oficial.
+
+Lograr hiperrealismo con Seedream 4.5
+
+Para máximo fotorrealismo, cinco técnicas son fundamentales. Especificar cámara y lente ("shot on iPhone 15,
+
+===== PÁGINA 4 / 9 =====
+
+26mm lens" o "85mm lens, f/1.8") ancla el modelo en datos de entrenamiento fotográfico profesional.
+
+Nombrar stocks de película ("35mm film grain, Kodachrome") activa la emulación de esencias
+fotográficas específicas. Incluir detalles de textura ("natural skin texture, subtle makeup,
+crisp details") previene el suavizado excesivo que es la debilidad conocida del modelo en close-ups.
+
+age
+
+Agregar términos de iluminación específicos ("soft window light", "golden hour", "studio lighting with soft
+bounce") en lugar de genéricos. Y evitar mezclar estilos incompatibles — combinar "hyperrealistic photo" con
+
+Negative prompts recomendados para retratos hiperrealistas con Seedream:
+
+"oil painting" en un mismo prompt produce resultados inconsistentes.
+
+blurry, distorted features, extra fingers, deformed hands,
+oversaturated, plastic skin, waxy skin, doll-like,
+
+cartoon, anime, illustration, painting, 3d render
+
+Framework de traducción: de lenguaje natural a prompts técnicos
+
+El sistema más efectivo para convertir descripciones casuales en prompts optimizados sigue un proceso de 5
+pasos: extraer el sujeto core, determinar la categoría de imagen, hacer preguntas clarificadoras sobre elementos
+faltantes, seleccionar la plantilla apropiada y optimizar para el modelo destino.
+
+Las 7 preguntas esenciales para extraer información del usuario
+
+Cuando un usuario dice "quiero una foto de una mujer en la ciudad”, faltan al menos 7 dimensiones críticas
+
+que determinan la calidad del resultado:
+
+1. Sujeto: ¿Qué edad, rasgos, expresión, vestimenta, pose específica?
+
+2. Entorno: ¿Interior/exterior, ciudad específica, hora del día, clima?
+
+3. Iluminación: ¿Natural/artificial, dirección, temperatura de color, setup nombrado (Rembrandt, butterfly,
+rim)?
+
+4. Composición: ¿Close-up, medio cuerpo, cuerpo entero? ¿Ángulo de cámara? ¿Regla de tercios, centrado,
+líneas guía?
+
+5. Estilo y mood: ¿Editorial, documental, comercial, cinematográfico? ¿Paleta de colores? ¿Tono
+emocional?
+
+6. Técnica fotográfica: ¿Qué profundidad de campo? ¿Bokeh o todo enfocado? ¿Look de película
+analógica?
+
+7. Exclusiones: ¿Qué NO debe aparecer? ¿Qué estilo evitar?
+
+Checklist completo para un prompt hiperrealista
+
+Todo prompt hiperrealista de alta calidad debería cubrir estos elementos:
+
+===== PÁGINA 5 / 9 =====
+
++ Sujeto con detalles específicos (no "una mujer" sino "mujer de 28 años, cabello castaño ondulado, pecas
+sutiles, expresión contemplativa”)
+
++ Acción o pose concreta
+
++ Entorno con al menos 2-3 elementos de contexto
+
++ Hora del día y condiciones atmosféricas
+
++ Tipo de iluminación con dirección y calidad (dura/suave)
+
++ Camara y lente específicos (Canon EOS RS, 85mm f/1.4)
+
++ Apertura para controlar profundidad de campo
+
++ Stock de película si se desea un look específico (Kodak Portra 400 para tonos de piel cálidos)
+
++ Formato y resolución (aspect ratio, 8K)
+
+¢ Estilo fotográfico nombrado (editorial, documentary, fashion)
+
++ Al menos 2 "imperfecciones realistas" (film grain, chromatic aberration sutil, textura de piel con poros
+
+visibles)
+
+Plantillas reutilizables por categoría
+
+Retrato editorial:
+
+Retrato [tipo: headshot/medio cuerpo/ambiental] de [sujeto con
+detalles físicos), [expresión], vistiendo [ropa con detalles de
+tela y color]. [Pose], en [locación específica]. [Iluminacién:
+Rembrandt/butterfly/natural de ventana], [hora del día]
+Capturado con [cámara], lente [focal]mm [apertura],
+profundidad de campo [shallow/deep]. Textura de piel natural
+con poros visibles, tonos [cálidos/frios], [stock de película].
+
+Estilo de fotografía [editorial/fashion/documentary]
+
+Paisaje natural:
+
+Fotografía de paisaje [tipo:
+
+éreo/panorámico/íntimo] de
+[terreno específico), [condiciones climáticas], [descripción
+
+del cielo], [elementos de primer plano para profundidad]
+Capturado con lente gran angular [16-24mm], (/[8-11],
+enfoque profundo. Iluminación de [golden hour/blue hour/
+tormenta dramática]. Atmósfera [brumosa/serena/dramática].
+[Paleta de colores]. Estilo [National Geographic/Ansel Adams].
+
+8K, fotorrealista.
+
+Producto comercial:
+
+===== PÁGINA 6 / 9 =====
+
+Fotografía profesional de producto, [producto con descripción
+
+de material: metal cepillado/cerámica mate/vidrio brillante],
+[ángulo: cenital/45°/nivel de ojo], sobre [superficie:
+mármol/madera/fondo blanco puro]. Iluminación de estudio
+[tres puntos/softbox difusa/rim light dramática]. [Props
+
+i lifestyle]. Lente [85-100mm], 1/[2.8-5.6],
+
+enfoque nítido en producto. Calidad comercial, colores
+
+contextuale:
+
+precisos, 8K.
+
+Arquitectura:
+
+Fotografía arquitectónica [interior/exterior] de [edificio
+con estilo: modernista/brutalista/art deco], [perspectiva:
+frontal/tres cuartos/contrapicado]. [Hora del dia], [cielo].
+Lente tilt-shift [16-24mm], f/[8-11], enfoque profundo.
+[Iluminacién: natural/artificial/mixta]. Materiales
+fotorrealistas [concreto/vidrio/acero/madera]. Estilo
+[ArchDaily/Dezeen/Architectural Digest]. 8K.
+
+Street photography cinematográfica:
+
+Fotografía callejera [candid/cinematográfica] de [escena],
+[sujeto en acción], [hora y clima]. Lente [35-50mm],
+f/[2.8-5.6]. [Iluminacién: ncón/farolas/lluvia reflejada].
+[Color grading: teal and orange/desaturado/cálido].
+
+Textura de grano de pelicula [Kodak Tri-X/Cinestill 800T].
+[Referencia: Blade Runner/Wong Kar-wai]. Mood [dramático/
+
+nostálgico/energético]. Fotorrealista.
+
+Técnicas avanzadas que marcan la diferencia en 2025
+
+Prompt weighting: sintaxis y mejores prácticas
+
+La ponderación de prompts varía dramáticamente entre modelos. En Stable Diffusion (A1111/Forge), la
+
+sintaxis multiplica el peso por 1.3x, con un rango óptimo entre 0.4 y 1.6 — valores fuera de este
+rango causan artefactos o se ignoran. En SDXL, la sensibilidad es mayor: no exceder un
+multiplicador de 1.4. FLUX no soporta nativamente la sintaxis de pesos en la mayoría de
+interfaces; en su lugar, usar lenguaje natural como "con fuerte énfasis en” o "con foco principal en".
+
+Seedream 4.5 soporta para ajustes sutiles. Nano Banana Pro usa MAYÚSCULAS y
+palabras de comando ("MUST", "EXACTLY") en lugar de pesos numéricos.
+
+Una técnica avanzada es el prompt scheduling: ([keyword1:keyword2:0.5]) renderiza keyword! durante el 50%
+
+inicial de los steps y luego cambia a keyword2, útil para mezclar conceptos con control temporal.
+
+===== PÁGINA 7 / 9 =====
+
+Life by The Al Cats Para blending de rostros, pesos diferenciados como ((Emma Watson:0.5), (Ana de
+Armas: 1.2)) permiten mezclas controladas. (Stable Diffusion Art
+
+El orden importa: qué va primero
+
+Hay consenso casi universal en la comunidad: las palabras al inicio del prompt tienen mayor prioridad.
+
+El peso semántico disminuye de izquierda a derecha. (Christy Tucker Learning +3) La estructura Óptima
+
+documentada es:
+
+1. Tipo de imagen/medio ("editorial photo", "cinematic still")
+
+»
+
+Sujeto con detalles específicos
+Acción/pose
+
+Entorno/setting
+
+Hluminación
+
+Cámara/técnica
+
+Estilo/mood
+
+Ap.»
+
+Modificadores de calidad
+
+Para FLUX 2 específicamente, fal.ai confirma: "FLUX 2 da más peso a la información anterior. Coloca los
+
+requisitos críticos al principio.”
+
+Nunca esconder el sujeto principal al final del prompt.
+
+Referencias fotográficas: la técnica de mayor impacto
+
+Especificar cámara + lente + stock de película es probablemente la técnica individual más impactante para
+hiperrealismo. Funciona porque señala al modelo que debe recurrir a las fotografías profesionales de su dataset
+de entrenamiento, que incluyen metadatos de cámara.
+
+Las combinaciones más efectivas por caso de uso:
+
++ Retratos: Canon EOS RS o Sony A7R IV + 85mm f/1.4 + Kodak Portra 400
+
++ Paisajes: Nikon D850 + 16-24mm f/8-f/11 + Fujifilm Velvia 50
+
++. Street photography: Fujifilm X-T4 + 35mm f/2.8 + Kodak Tri-X 400
+
++ Producto: Canon EOS 5D Mark IV + 100mm macro f/5.6 + Kodak Ektar 100
+
++ Cinematográfico nocturno: Arri Alexa + anamórfico + Cinestill 800T
+
++  Casual/smartphone realista: "shot on iPhone 16 Pro” (especialmente efectivo en FLUX)
+
+El principio de la imperfección
+
+Las fotografías reales contienen imperfecciones sutiles que nuestro cerebro asocia inconscientemente con
+autenticidad. Agregar estos elementos hace que las imágenes Al parezcan menos artificiales: film
+grain sutil, chromatic aberration leve, textura de piel con poros visibles, partículas de polvo en haces de
+
+luz, viñeteado natural, micro-expresiones. Sin estos elementos, las imágenes caen en el "uncanny valley” de
+
+lo demasiado perfecto.
+
+===== PÁGINA 8 / 9 =====
+
+Consistencia en múltiples generaciones
+
+Mantener consistencia visual a través de varias imágenes requiere estrategias combinadas. El seed
+fijo asegura que el patrón de ruido inicial sea idéntico — mantener el mismo seed mientras se hacen cambios
+pequeños al prompt preserva composición y rasgos del personaje.
+detalladas y constantes del personaje (que se repiten idénticas en cada prompt) anclan la identidad visual.
+
+La estructura de prefijo constante + sufijo variable permite cambiar escena y acción sin
+perder identidad del sujeto.
+
+Descripciones extremadamente
+
+En Nano Banana Pro, el system prompt es la herramienta más poderosa para consistencia: define restricciones
+de estilo que se aplican automáticamente a cualquier prompt del usuario. Seedream 4.5 recomienda
+WaveSpeedAL) fijar un seed después de obtener un buen rostro y usarlo como ancla para iteraciones
+
+Herramientas específicas de otras plataformas incluyen
+
+posteriores.
+
+en Midjourney V7 para referencias de
+personaje y estilo, IP-Adapter para SD/SDXL, y LoRA training (10-30 imágenes) para máxima fidelidad de
+
+personaje.
+
+Configuraciones técnicas óptimas por modelo
+
+Para quienes trabajan con modelos que exponen parámetros técnicos directamente, estas son las configuraciones
+respaldadas por la comunidad para hiperrealismo:
+
+Parámetro SDXL FLUX.1 dev Seedream 4.5
+CFG/Guidance 3-5 (fotorrealismo) 3.0-3.5 5.5-7.5
+
+Steps 25-40 24-32 28-32
+
+Sampler DPM++ 2M Karras NIA (interno) DPM++ 2M Karras,
+Resolución 1024x1024 768-1024 1024-2048
+
+Hires fix 1.5-2x con 0.3-0.5 denoising N/A Upscale externo
+
+Para Nano Banana Pro, no hay parámetros técnicos expuestos al usuario — toda la calidad se controla a través
+del prompt. La recomendación es solicitar explícitamente "4K" cuando se necesiten micro-texturas (grano de
+metal cepillado, hilos de tela) y usar la edición conversacional para refinar iterativamente.
+
+Un descubrimiento clave de la comunidad: CFG alto es contraproducente para fotorrealismo.
+SDXL, valores de CFG por encima de 7 producen imágenes que lucen artificiales y sobresaturadas.
+El sweet spot para hiperrealismo está entre 3 y 5. En FLUX, el guidance por defecto de 3.5 ya está
+optimizado — subirlo reduce realismo.
+
+===== PÁGINA 9 / 9 =====
+
+Conclusión: hacia un prompting inteligente y adaptativo
+
+El paradigma del prompting para imágenes Al ha cambiado fundamentalmente entre 2024 y 2025. Los modelos
+de última generación como Nano Banana Pro y Seedream 4.5 entienden intención, no solo keywords. Esto
+significa que la habilidad más valiosa ya no es memorizar listas de modificadores técnicos, sino la capacidad de
+describir con precisión y claridad lo que se quiere ver — incluyendo el tipo de fotografía, la
+iluminación específica, la textura de los materiales y las imperfecciones que hacen que una imagen parezca real.
+
+La mayor oportunidad no explotada está en los system prompts de Nano Banana Pro para crear estilos
+visuales consistentes a escala, y en la velocidad de Seedream 4.5 (~1.5 segundos por imagen a
+BytePlus ) Para producción hiperrealista seria, la combinación
+
+más efectiva es usar Seedream 4.5 para exploración rápida y prototipado, y Nano Banana Pro para la generación
+
+$0.04) para iteración rápida de conceptos.
+
+final con máximo control y calidad. El prompting que produce los mejores resultados en ambos
+modelos no es el más largo ni el más técnico — es el que describe la escena como la describiría un director de
+fotografía experimentado hablando con su equipo: específico sobre la luz, preciso sobre la composición, y
+claro sobre la emoción que debe transmitir la imagen.
